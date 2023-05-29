@@ -10,14 +10,14 @@ async function initWasm() {
         go.importObject,
     );
 
-    go.run(wasm.instance);
+    await go.run(wasm.instance);
+
+    const onSubmit = async () => {
+        const { value } = input as HTMLInputElement;
+    };
 
     btn.addEventListener('click', onSubmit, { once: true });
-}
 
-async function onSubmit() {
-    const value = (input as HTMLInputElement).value;
     
 }
-
 initWasm();
